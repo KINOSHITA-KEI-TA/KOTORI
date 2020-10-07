@@ -31,6 +31,8 @@ if (isset($_SESSION['EMAIL'])) {
    </form>
    <h1>初めての方はこちら</h1>
    <form action="signUp.php" method="post">
+     <label for="name">Name</label>
+     <input type"name">Name</label> 
      <label for="email">email</label>
      <input type="email" name="email">email
      <label for="password">password</label>
@@ -59,6 +61,8 @@ try {
 } catch (Exception $e) {
   echo $e->getMessage() . PHP_EOL;
 }
+
+
 //POSTのValidate。
 if (!$email = filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
   echo '入力された値が不正です。';
@@ -73,8 +77,8 @@ if (preg_match('/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i', $_POST['password']
 }
 //登録処理
 try {
-  $stmt = $pdo->prepare("insert into userDeta(email, password) value(?, ?)");
-  $stmt->execute([$email, $password]);
+  $stmt = $pdo->prepare("insert into userDeta(name, email, password) value(?, ?)");
+  $stmt->execute([$name, $email, $password]);
   echo '登録完了';
 } catch (\Exception $e) {
   echo '登録済みのメールアドレスです。';
