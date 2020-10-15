@@ -33,7 +33,6 @@ function getAllTrip(){
 // $dbh = new PDO($dsn,$user,$pass);
 
 // var_dump($dbh);
-$tripDATA = getAllTrip();
 
 function setCategoryName($category){
   if ($category === '1'){
@@ -45,32 +44,28 @@ function setCategoryName($category){
   }
 }
 
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>旅の一覧</title>
-</head>
-<body>
-<h2>旅の一覧</h2>
-  <table>
-    <tr>
-      <th>No</th>
-      <th>タイトル</th>
-      <th>カテゴリ</th>
-    </tr>
-    <?php foreach($tripDATA as $column): ?>
-    <tr>
-      <td><?php echo $column['id'] ?></td>
-      <td><?php echo $column['title'] ?></td>
-      <td><?php echo setCategoryName($column['category']) ?></td>
-      <td><a href= "/project/detail.php?id=<?php echo $column['id'] ?>">詳細</a></td>
-    </tr>
-    <?php endforeach; ?>
 
-  </table>
+function getTrip($id){
+
+  if(empty($id)){
+    exit('不正アクセスです。');
+  }
   
-</body>
-</html>
+  $dbh = dbConnect();
+
+  $stmt = $dbh->prepare('SELECT * FROM trip Where id = :id');
+  $stmt->bindValue(':id',(int)$id, PDO::PARAM_INT);
+
+  $stmt->execute();
+
+  $result = $stmt->fetch(PDO::FETCH_ASSOC);
+  
+  if(!$result){
+    exit('ブログがありません');
+  }
+
+  return $result;
+  
+}
+
+?>

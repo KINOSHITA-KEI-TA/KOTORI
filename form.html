@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>旅日記登録</title>
+</head>
+<body>
+  <h2>投稿フォーム</h2>
+  <form action="/project/trip_create.php" method="POST">
+  <p>旅のタイトル：</p>
+  <input type="text" name="title">
+  <p>日記の本文：</p>
+  <textarea name="content" id="content" cols="30" rows="10"></textarea>
+  <br>
+  <p>カテゴリ：</p>
+  <select name="category">
+    <option value="1">日常</option>
+    <option value="2">旅の記録</option>
+  </select>
+  <br>
+  <input type="radio" name="publish_status" value="1" checked>公開
+  <input type="radio" name="publish_status" value="2" checked>非公開
+  <br>
+  <input type="submit" value="投稿">
+</form>
+  
+</body>
+</html>
