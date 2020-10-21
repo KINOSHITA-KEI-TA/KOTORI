@@ -38,6 +38,6 @@
   <br>
   <input type="submit" value="投稿">
 </form>
-  
+<p><a href="/">もどる</a></p>
 </body>
 </html>

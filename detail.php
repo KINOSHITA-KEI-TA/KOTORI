@@ -22,6 +22,6 @@
 <hr>
 <p>本文：<?php echo $result['content'] ?></p>
 
-  
+<p><a href="/">もどる</a></p>
 </body>
 </html>

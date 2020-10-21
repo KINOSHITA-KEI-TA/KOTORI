@@ -1,14 +1,16 @@
 
 <?php
-
+require_once('env.php');
 Class Dbc
 {
   protected $table_name;
   
   protected function dbConnect(){
-    $dsn = 'mysql:host=localhost;dbname=trip_app;charset=utf8';
-    $user = 'trip_user';
-    $pass = '08030702';
+    $host   = DB_HOST;
+    $dbname = DB_NAME;
+    $user   = DB_USER;
+    $pass   = DB_PASS;
+    $dsn    = "mysql:host=$host;dbname=$dbname;charset=utf8";
     try{
       $dbh = new PDO($dsn,$user,$pass,[
         PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
@@ -61,5 +63,22 @@ Class Dbc
     return $result;
     
   }
+  public function delete($id){
+    if(empty($id)){
+      exit('不正アクセスです。');
+    }
+    
+    $dbh = $this->dbConnect();
+
+    $stmt = $dbh->prepare("DELETE FROM $this->table_name Where id = :id");
+    $stmt->bindValue(':id',(int)$id, PDO::PARAM_INT);
+
+    $stmt->execute();
+
+    echo '日記を削除しました';
+
+    return $result;
+  }
+
 }
 ?>
