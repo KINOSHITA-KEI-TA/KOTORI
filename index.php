@@ -30,6 +30,7 @@ $tripDATA = $trip->getAll();
       <td><?php echo $column['title'] ?></td>
       <td><?php echo $trip->setCategoryName($column['category']) ?></td>
       <td><a href= "/project/detail.php?id=<?php echo $column['id'] ?>">詳細</a></td>
+      <td><a href= "/project/update_form.php?id=<?php echo $column['id'] ?>">編集</a></td>
     </tr>
     <?php endforeach; ?>
 
