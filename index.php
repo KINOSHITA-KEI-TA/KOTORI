@@ -1,8 +1,10 @@
 <?php
 
-require_once('dbc.php');
+require_once('trip.php');
+ini_set('display_errors',"on");
+$trip = new Trip();
 
-$tripDATA = getAllTrip();
+$tripDATA = $trip->getAll();
 
 ?>
 
@@ -26,7 +28,7 @@ $tripDATA = getAllTrip();
     <tr>
       <td><?php echo $column['id'] ?></td>
       <td><?php echo $column['title'] ?></td>
-      <td><?php echo setCategoryName($column['category']) ?></td>
+      <td><?php echo $trip->setCategoryName($column['category']) ?></td>
       <td><a href= "/project/detail.php?id=<?php echo $column['id'] ?>">詳細</a></td>
     </tr>
     <?php endforeach; ?>
