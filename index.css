@@ -1,6 +1,10 @@
 body{
   background-color: rgb(247, 246, 243);
 }
+img{
+  width: 100%;
+  height: 300px;
+}
 .title{
   color: red;
 }

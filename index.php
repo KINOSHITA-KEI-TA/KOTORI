@@ -21,6 +21,7 @@ function h ($s){
   <title>旅の一覧</title>
 </head>
 <body>
+<?php echo "<img src=KEIBLOG-main.jpg>";?>
 <div class="header">
   <h2 class="title">＜私の旅日記＞</h2>
 </div>

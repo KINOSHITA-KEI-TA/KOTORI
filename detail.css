@@ -1,0 +1,24 @@
+body{
+  background-color: rgb(247, 246, 243);
+}
+.detail{
+  border: solid 5px brown;
+  padding: 20px;
+  margin: 50px;
+  width: 70%;
+  height: 70vh;
+  background-color: rgb(240, 228, 205);
+}
+.title{
+  color: brown;
+  border: solid 2px red;
+  padding: 10px 10px 10px 20px;
+  background-color: white;
+}
+.enter-title{
+  font-size: 23px;
+  font-weight: bold;
+}
+.enter-content{
+  font-size: 20px;
+}
