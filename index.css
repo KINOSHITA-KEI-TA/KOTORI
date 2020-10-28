@@ -1,0 +1,28 @@
+body{
+  background-color: rgb(247, 246, 243);
+}
+.title{
+  color: red;
+}
+.header{
+  margin: 40px 0px 10px 10px;
+}
+.content{
+  display: flex;
+  justify-content: center;
+  border: solid 4px brown;
+  padding: 30px;
+  background-color: rgb(230, 215, 185);
+}
+.new-content{
+  border: solid 4px brown;
+  padding: 10px;
+}
+
+.enter-block{
+  margin-top: 10px;
+}
+.block{
+  padding: 10px;
+  border-bottom: solid 2px brown;
+}
