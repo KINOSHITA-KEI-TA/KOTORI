@@ -21,7 +21,7 @@
 </head>
 <body>
   <div class="Form">
-    <h2>投稿フォーム</h2>
+    <h2>投稿画面〜編集〜</h2>
     <form action="/project/trip_update.php" method="POST">
     <input type="hidden" name= "id"  value="<?php echo $id ?>">
     <p class="form-font">旅のタイトル：</p>
