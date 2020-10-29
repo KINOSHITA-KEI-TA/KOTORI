@@ -31,6 +31,6 @@
   </div>
 </div>
 
-<p><a href="/">もどる</a></p>
+<p><a href="index.php">もどる</a></p>
 </body>
 </html>

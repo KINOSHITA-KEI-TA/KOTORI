@@ -7,4 +7,4 @@ $trip->tripValidate($trips);
 $trip->tripUpdate($trips);
 
 ?>
-<p><a href="/">もどる</a></p>
+<p><a href="index.php">もどる</a></p>

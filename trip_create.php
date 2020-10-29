@@ -7,4 +7,4 @@ require_once('trip.php');
   $trip->tripCreate($trips);
 
 ?>
-<p><a href="/">もどる</a></p>
+<p><a href="index.php">もどる</a></p>
