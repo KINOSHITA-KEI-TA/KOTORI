@@ -45,4 +45,5 @@
   </div>
 <p><a href="index.php">もどる</a></p>
 </body>
+<footer>Copyright YOU ARE 2020.</footer>
 </html>
