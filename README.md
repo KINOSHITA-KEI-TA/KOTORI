@@ -10,6 +10,14 @@
 ## デモ画像②
 ![demo-2](https://user-images.githubusercontent.com/67889594/97420000-18412c80-194e-11eb-942d-095184656607.png)
 
+## usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|
+|name|varchar|
+|email|varchar|
+|password|varchar|
+
 
 ## tripsテーブル
 |Column|Type|Options|
